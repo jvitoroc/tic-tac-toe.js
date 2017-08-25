@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo da velha</title>
+		<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+		
+		<script src="script.js"></script>
+		<style>
+			.container{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
+			.config{
+				display: flex;
+				margin-bottom: 60px;
+			}
+			.config > div{
+				margin: 10px;
+			}
+			img{
+				display: block;
+				max-width: 100%;
+			}
+			.playground{
+				display: flex;
+				height: 300px;
+				margin-top: 40px auto 0 auto;
+			}
+			.playground > div{
+				margin: 20px;
+			}
+			.playground .game{
+				display: flex;
+				flex-wrap: wrap;
+				width: 300px;
+				height: 300px;
+			}
+			.playground .game > div{
+				flex: 1 1 100%;
+				display: flex;
+				
+			}
+			.playground .game > div > div{
+				outline: 1px solid black;
+				flex: 1 1 33.333%;
+			}
+			.ingame{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<div class="config">
+			<div class="p1 p">
+				<img src="imgs/player1.png">
+				<input type="text" class="player1">
+			</div> 
+			<div style="display: flex" class="play">
+				<img style="align-self: flex-end;" id="play" src="imgs/start.png">
+			</div>
+			<div class="p2 p">
+				<img src="imgs/player2.png">
+				<input type="text" class="player2">
+			</div>
+		</div>
+
+		<div class="playground">
+		<div>
+		<img src="imgs/player1.png"><div class="ingame-p1 ingame"></div></div>
+			<div class="game">
+			<div>
+				<div class="j a1"></div>
+				<div class="j a2"></div>
+				<div class="j a3"></div>
+				</div><div>
+				<div class="j b1"></div>
+				<div class="j b2"></div>
+				<div class="j b3"></div>
+</div><div>
+				<div class="j c1"></div>
+				<div class="j c2"></div>
+				<div class="j c3"></div>
+				</div>
+			</div>
+			<div>
+			<img src="imgs/player2.png"><div class="ingame-p2 ingame"></div></div>
+		</div>
+		</div>
+	</body>
+</html>
